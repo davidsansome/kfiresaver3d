@@ -32,10 +32,12 @@
 #define FIELDY_2 FIELDYHEIGHT/2.0
 
 #include <qgl.h>
-#include <qptrlist.h>
+#include <q3ptrlist.h>
 #include <qimage.h>
 #include <qstring.h>
 #include <qevent.h>
+//Added by qt3to4:
+#include <QTimerEvent>
 
 class Particle;
 
@@ -68,7 +70,7 @@ private:
 //		noveTexture;
 //		cometTexture;
 
-	QPtrList<Particle>
+	Q3PtrList<Particle>
 		particleList,
 		starList;
 

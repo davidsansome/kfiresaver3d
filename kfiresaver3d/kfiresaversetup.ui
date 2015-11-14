@@ -201,7 +201,7 @@ David Sansome
  &lt;me@davidsansome.com&gt;</string>
                 </property>
                 <property name="textFormat">
-                    <enum>PlainText</enum>
+                    <enum>Qt::PlainText</enum>
                 </property>
                 <property name="scaledContents">
                     <bool>false</bool>
@@ -223,248 +223,248 @@ David Sansome
                     <palette>
                         <active>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>218</red>
-                                <green>226</green>
-                                <blue>255</blue>
+                                <Qt::red>218</Qt::red>
+                                <Qt::green>226</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>236</red>
-                                <green>240</green>
-                                <blue>255</blue>
+                                <Qt::red>236</Qt::red>
+                                <Qt::green>240</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>109</red>
-                                <green>113</green>
-                                <blue>127</blue>
+                                <Qt::red>109</Qt::red>
+                                <Qt::green>113</Qt::green>
+                                <Qt::blue>127</Qt::blue>
                             </color>
                             <color>
-                                <red>145</red>
-                                <green>151</green>
-                                <blue>170</blue>
+                                <Qt::red>145</Qt::red>
+                                <Qt::green>151</Qt::green>
+                                <Qt::blue>170</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>230</red>
-                                <green>230</green>
-                                <blue>230</blue>
+                                <Qt::red>230</Qt::red>
+                                <Qt::green>230</Qt::green>
+                                <Qt::blue>230</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>128</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>128</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                         </active>
                         <disabled>
                             <color>
-                                <red>128</red>
-                                <green>128</green>
-                                <blue>128</blue>
+                                <Qt::red>128</Qt::red>
+                                <Qt::green>128</Qt::green>
+                                <Qt::blue>128</Qt::blue>
                             </color>
                             <color>
-                                <red>218</red>
-                                <green>226</green>
-                                <blue>255</blue>
+                                <Qt::red>218</Qt::red>
+                                <Qt::green>226</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>109</red>
-                                <green>113</green>
-                                <blue>127</blue>
+                                <Qt::red>109</Qt::red>
+                                <Qt::green>113</Qt::green>
+                                <Qt::blue>127</Qt::blue>
                             </color>
                             <color>
-                                <red>145</red>
-                                <green>151</green>
-                                <blue>170</blue>
+                                <Qt::red>145</Qt::red>
+                                <Qt::green>151</Qt::green>
+                                <Qt::blue>170</Qt::blue>
                             </color>
                             <color>
-                                <red>128</red>
-                                <green>128</green>
-                                <blue>128</blue>
+                                <Qt::red>128</Qt::red>
+                                <Qt::green>128</Qt::green>
+                                <Qt::blue>128</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>128</red>
-                                <green>128</green>
-                                <blue>128</blue>
+                                <Qt::red>128</Qt::red>
+                                <Qt::green>128</Qt::green>
+                                <Qt::blue>128</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>230</red>
-                                <green>230</green>
-                                <blue>230</blue>
+                                <Qt::red>230</Qt::red>
+                                <Qt::green>230</Qt::green>
+                                <Qt::blue>230</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>128</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>128</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>192</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>192</Qt::blue>
                             </color>
                             <color>
-                                <red>128</red>
-                                <green>0</green>
-                                <blue>128</blue>
+                                <Qt::red>128</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>128</Qt::blue>
                             </color>
                         </disabled>
                         <inactive>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>218</red>
-                                <green>226</green>
-                                <blue>255</blue>
+                                <Qt::red>218</Qt::red>
+                                <Qt::green>226</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>109</red>
-                                <green>113</green>
-                                <blue>127</blue>
+                                <Qt::red>109</Qt::red>
+                                <Qt::green>113</Qt::green>
+                                <Qt::blue>127</Qt::blue>
                             </color>
                             <color>
-                                <red>145</red>
-                                <green>151</green>
-                                <blue>170</blue>
+                                <Qt::red>145</Qt::red>
+                                <Qt::green>151</Qt::green>
+                                <Qt::blue>170</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>230</red>
-                                <green>230</green>
-                                <blue>230</blue>
+                                <Qt::red>230</Qt::red>
+                                <Qt::green>230</Qt::green>
+                                <Qt::blue>230</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>0</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>0</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>128</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>128</Qt::blue>
                             </color>
                             <color>
-                                <red>255</red>
-                                <green>255</green>
-                                <blue>255</blue>
+                                <Qt::red>255</Qt::red>
+                                <Qt::green>255</Qt::green>
+                                <Qt::blue>255</Qt::blue>
                             </color>
                             <color>
-                                <red>0</red>
-                                <green>0</green>
-                                <blue>192</blue>
+                                <Qt::red>0</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>192</Qt::blue>
                             </color>
                             <color>
-                                <red>128</red>
-                                <green>0</green>
-                                <blue>128</blue>
+                                <Qt::red>128</Qt::red>
+                                <Qt::green>0</Qt::green>
+                                <Qt::blue>128</Qt::blue>
                             </color>
                         </inactive>
                     </palette>
@@ -505,7 +505,7 @@ David Sansome
                         <string>P R E V I E W</string>
                     </property>
                     <property name="alignment">
-                        <set>AlignCenter</set>
+                        <set>Qt::AlignCenter</set>
                     </property>
                 </widget>
             </widget>
@@ -795,7 +795,7 @@ David Sansome
                             <number>8</number>
                         </property>
                         <property name="orientation">
-                            <enum>Horizontal</enum>
+                            <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="toolTip" stdset="0">
                             <string>this sets how often fireworks are released</string>
@@ -980,9 +980,9 @@ David Sansome
                 </property>
                 <property name="paletteBackgroundColor">
                     <color>
-                        <red>211</red>
-                        <green>226</green>
-                        <blue>226</blue>
+                        <Qt::red>211</Qt::red>
+                        <Qt::green>226</Qt::green>
+                        <Qt::blue>226</Qt::blue>
                     </color>
                 </property>
                 <property name="frameShape">
@@ -1065,7 +1065,7 @@ David Sansome
                     </rect>
                 </property>
                 <property name="text">
-                    <string>Deep-sea green</string>
+                    <string>Deep-sea Qt::green</string>
                 </property>
                 <property name="checked">
                     <bool>true</bool>
@@ -1106,7 +1106,7 @@ David Sansome
                     <enum>Sunken</enum>
                 </property>
                 <property name="orientation">
-                    <enum>Horizontal</enum>
+                    <enum>Qt::Horizontal</enum>
                 </property>
             </widget>
             <widget class="QCheckBox">
@@ -1185,7 +1185,7 @@ David Sansome
                     </rect>
                 </property>
                 <property name="text">
-                    <string>Deep red</string>
+                    <string>Deep Qt::red</string>
                 </property>
                 <property name="checked">
                     <bool>true</bool>
@@ -1223,7 +1223,7 @@ David Sansome
                     </rect>
                 </property>
                 <property name="text">
-                    <string>Purest green</string>
+                    <string>Purest Qt::green</string>
                 </property>
                 <property name="checked">
                     <bool>true</bool>
@@ -1242,7 +1242,7 @@ David Sansome
                     </rect>
                 </property>
                 <property name="text">
-                    <string>Boring blue</string>
+                    <string>Boring Qt::blue</string>
                 </property>
                 <property name="checked">
                     <bool>true</bool>
@@ -1280,7 +1280,7 @@ David Sansome
                     </rect>
                 </property>
                 <property name="text">
-                    <string>Blinding white</string>
+                    <string>Blinding Qt::white</string>
                 </property>
                 <property name="checked">
                     <bool>true</bool>
@@ -1433,7 +1433,7 @@ David Sansome
                                 <number>5</number>
                             </property>
                             <property name="orientation">
-                                <enum>Horizontal</enum>
+                                <enum>Qt::Horizontal</enum>
                             </property>
                         </widget>
                         <widget class="QLabel">
@@ -1669,7 +1669,7 @@ David Sansome
                         <number>3</number>
                     </property>
                     <property name="orientation">
-                        <enum>Horizontal</enum>
+                        <enum>Qt::Horizontal</enum>
                     </property>
                 </widget>
             </widget>
@@ -1795,7 +1795,7 @@ David Sansome
                                 <number>3</number>
                             </property>
                             <property name="orientation">
-                                <enum>Horizontal</enum>
+                                <enum>Qt::Horizontal</enum>
                             </property>
                             <property name="toolTip" stdset="0">
                                 <string>adjust fading value</string>
@@ -1855,7 +1855,7 @@ David Sansome
                         <string>click on the ? button and then here for more info</string>
                     </property>
                     <property name="whatsThis" stdset="0">
-                        <string>This changes the way the screen is cleared. If this option is enabled, instead of flooding the buffer whith black color, a semi transparent black 'glass' is superposed on scene. This 'fades down' the lightness of the picture and gives a natural 'tail' effect .. try me :-) !!</string>
+                        <string>This changes the way the screen is cleared. If this option is enabled, instead of flooding the buffer whith Qt::black color, a semi transparent Qt::black 'glass' is superposed on scene. This 'fades down' the lightness of the picture and gives a natural 'tail' effect .. try me :-) !!</string>
                     </property>
                 </widget>
             </widget>
@@ -1915,7 +1915,7 @@ David Sansome
                             <number>16</number>
                         </property>
                         <property name="orientation">
-                            <enum>Horizontal</enum>
+                            <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="toolTip" stdset="0">
                             <string>i want to slide right!</string>
