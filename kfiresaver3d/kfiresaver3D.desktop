@@ -1,0 +1,22 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=kfiresaver3d
+Icon=kscreensaver
+Type=Application
+Actions=Setup;InWindow;Root
+Name=Fireworks3D (GL)
+
+[Desktop Action Setup]
+Exec=kfiresaver3d -setup
+Name=Setup...
+Icon=kscreensaver
+
+[Desktop Action InWindow]
+Exec=kfiresaver3d -window-id %w
+Name=Display in specified window
+NoDisplay=true
+ 
+[Desktop Action Root]
+Exec=kfiresaver3d -root
+Name=Display in root window
+NoDisplay=true

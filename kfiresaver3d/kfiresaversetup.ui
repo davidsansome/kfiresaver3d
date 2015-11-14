@@ -1,0 +1,2138 @@
+<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<class>KFireSaverSetup</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>KFireSaverSetup</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>440</width>
+            <height>250</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>0</hsizetype>
+            <vsizetype>0</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>440</width>
+            <height>250</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>440</width>
+            <height>250</height>
+        </size>
+    </property>
+    <property name="baseSize">
+        <size>
+            <width>440</width>
+            <height>250</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Fireworks setup</string>
+    </property>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>applyButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>132</x>
+                <y>225</y>
+                <width>102</width>
+                <height>21</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Use &amp;Preset</string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>quit whithout apply changes</string>
+        </property>
+        <property name="whatsThis" stdset="0">
+            <string>quit whithout apply changes</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>PushButton4</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>386</x>
+                <y>225</y>
+                <width>44</width>
+                <height>21</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;OK</string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>save changes and quit</string>
+        </property>
+        <property name="whatsThis" stdset="0">
+            <string>save changes and quit</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>PushButton5</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>315</x>
+                <y>225</y>
+                <width>66</width>
+                <height>21</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;Cancel</string>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>quit whithout apply changes</string>
+        </property>
+        <property name="whatsThis" stdset="0">
+            <string>quit whithout apply changes</string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>Simple</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>Real</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>More than real</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>Drugged</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>KoRaL's preset</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>presetsBox</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>225</y>
+                <width>115</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="currentItem">
+            <number>4</number>
+        </property>
+        <property name="autoCompletion">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QTabWidget">
+        <property name="name">
+            <cstring>TabWidget2</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>11</y>
+                <width>418</width>
+                <height>210</height>
+            </rect>
+        </property>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>About</string>
+            </attribute>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>TextLabel1_2</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>220</x>
+                        <y>4</y>
+                        <width>190</width>
+                        <height>170</height>
+                    </rect>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>10</pointsize>
+                    </font>
+                </property>
+                <property name="text">
+                    <string>KFireSaver 3D - presented by:
+
+Enrico Ros
+   simple 3D engine, graphics effects,
+   different fireworks, sound, timeline..
+ &lt;asy@libero.it&gt;
+
+David Sansome
+   initial framework and concept,
+   setup dialog, bottom fire, artwork..
+ &lt;me@davidsansome.com&gt;</string>
+                </property>
+                <property name="textFormat">
+                    <enum>PlainText</enum>
+                </property>
+                <property name="scaledContents">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="QFrame">
+                <property name="name">
+                    <cstring>PreviewKFSFrame</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>6</x>
+                        <y>3</y>
+                        <width>202</width>
+                        <height>152</height>
+                    </rect>
+                </property>
+                <property name="palette">
+                    <palette>
+                        <active>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>218</red>
+                                <green>226</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>236</red>
+                                <green>240</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>109</red>
+                                <green>113</green>
+                                <blue>127</blue>
+                            </color>
+                            <color>
+                                <red>145</red>
+                                <green>151</green>
+                                <blue>170</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>230</red>
+                                <green>230</green>
+                                <blue>230</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>128</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                        </active>
+                        <disabled>
+                            <color>
+                                <red>128</red>
+                                <green>128</green>
+                                <blue>128</blue>
+                            </color>
+                            <color>
+                                <red>218</red>
+                                <green>226</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>109</red>
+                                <green>113</green>
+                                <blue>127</blue>
+                            </color>
+                            <color>
+                                <red>145</red>
+                                <green>151</green>
+                                <blue>170</blue>
+                            </color>
+                            <color>
+                                <red>128</red>
+                                <green>128</green>
+                                <blue>128</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>128</red>
+                                <green>128</green>
+                                <blue>128</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>230</red>
+                                <green>230</green>
+                                <blue>230</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>128</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>192</blue>
+                            </color>
+                            <color>
+                                <red>128</red>
+                                <green>0</green>
+                                <blue>128</blue>
+                            </color>
+                        </disabled>
+                        <inactive>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>218</red>
+                                <green>226</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>109</red>
+                                <green>113</green>
+                                <blue>127</blue>
+                            </color>
+                            <color>
+                                <red>145</red>
+                                <green>151</green>
+                                <blue>170</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>230</red>
+                                <green>230</green>
+                                <blue>230</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>0</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>128</blue>
+                            </color>
+                            <color>
+                                <red>255</red>
+                                <green>255</green>
+                                <blue>255</blue>
+                            </color>
+                            <color>
+                                <red>0</red>
+                                <green>0</green>
+                                <blue>192</blue>
+                            </color>
+                            <color>
+                                <red>128</red>
+                                <green>0</green>
+                                <blue>128</blue>
+                            </color>
+                        </inactive>
+                    </palette>
+                </property>
+                <property name="frameShape">
+                    <enum>StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                    <enum>Sunken</enum>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>preview window</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>Here come the preview (if isn't detached)</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>previewLabel</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>55</x>
+                            <y>70</y>
+                            <width>95</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <italic>1</italic>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>P R E V I E W</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignCenter</set>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>detachButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>133</x>
+                        <y>158</y>
+                        <width>75</width>
+                        <height>21</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>&amp;Detach</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>still experimental</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>Change the size of the preview window detaching or attaching it to the main window</string>
+                </property>
+            </widget>
+            <widget class="QPushButton">
+                <property name="name">
+                    <cstring>updateButton</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>6</x>
+                        <y>158</y>
+                        <width>122</width>
+                        <height>21</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>&amp;Update Preview</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>apply current changes to the running fireworks scene</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>apply current changes to the running fireworks scene</string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Fireworks</string>
+            </attribute>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>frequencyLabel2</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>160</y>
+                        <width>70</width>
+                        <height>16</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Frequency:</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire9Box</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>false</bool>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>210</x>
+                        <y>135</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Love</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire8Box</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>false</bool>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>210</x>
+                        <y>110</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Daisy</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire7Box</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>false</bool>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>210</x>
+                        <y>85</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Nova</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire6Box</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>false</bool>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>210</x>
+                        <y>60</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Fountain</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <item>
+                    <property name="text">
+                        <string>Randomize all</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>MonoType (color changes)</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>MonoChrome (type changes)</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>pseudo Show (hope this is the best one)</string>
+                    </property>
+                </item>
+                <property name="name">
+                    <cstring>showTypeList</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>200</x>
+                        <y>7</y>
+                        <width>200</width>
+                        <height>22</height>
+                    </rect>
+                </property>
+                <property name="autoCompletion">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>experimental. select how the show will proceed. experimental.</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>You can change the flow of events. Randm is the default *old* mode, but we know that we can do better than that!!</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>frequencyLabel2_2_2_2</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>12</x>
+                        <y>7</y>
+                        <width>185</width>
+                        <height>22</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Type of the show: (experimental)</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire1Box</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>60</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Classic Spherical</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>Layout3</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>85</x>
+                        <y>160</y>
+                        <width>320</width>
+                        <height>16</height>
+                    </rect>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>neverLabel2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Never</string>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>mmm.. what about a fireworks screensaver whithout fireworks??</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>mmm.. what about a fireworks screensaver whithout fireworks??</string>
+                        </property>
+                    </widget>
+                    <widget class="QSlider">
+                        <property name="name">
+                            <cstring>fireworkFrequencySlider</cstring>
+                        </property>
+                        <property name="minValue">
+                            <number>0</number>
+                        </property>
+                        <property name="maxValue">
+                            <number>20</number>
+                        </property>
+                        <property name="value">
+                            <number>8</number>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>this sets how often fireworks are released</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>this sets how often fireworks are released</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>oftenLabel2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Often</string>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>often: yeah, i like it</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>if you have enough power you can try this</string>
+                        </property>
+                    </widget>
+                </hbox>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire0Box</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>35</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Only Explosion</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire2Box</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>85</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Atomic Splitter</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire3Box</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>110</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Ring of flames</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire4Box</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>135</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>World of flames</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>fire5Box</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>210</x>
+                        <y>35</y>
+                        <width>190</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Sparkling Cascade</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>try me</string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Particles</string>
+            </attribute>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>trailsBox</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>false</bool>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>10</y>
+                        <width>160</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Fireworks leave a trail</string>
+                </property>
+                <property name="checked">
+                    <bool>false</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>not yet ported</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>not yet ported</string>
+                </property>
+            </widget>
+            <widget class="QFrame">
+                <property name="name">
+                    <cstring>Frame4</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>145</x>
+                        <y>155</y>
+                        <width>255</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="paletteBackgroundColor">
+                    <color>
+                        <red>211</red>
+                        <green>226</green>
+                        <blue>226</blue>
+                    </color>
+                </property>
+                <property name="frameShape">
+                    <enum>NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                    <enum>Plain</enum>
+                </property>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>allowSparkle</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>1</x>
+                            <y>0</y>
+                            <width>124</width>
+                            <height>19</height>
+                        </rect>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <italic>1</italic>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Allow sparkling</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>please, turn me on!</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This disables the 'flickering' effect of some fireworks. This is useful for example for cascade fireworks</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>allowCombos</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>130</x>
+                            <y>0</y>
+                            <width>95</width>
+                            <height>19</height>
+                        </rect>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <italic>1</italic>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Multicolor</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>try bi-colour fireworks</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This allow a random creation of fireworks that explodes in 2 colors</string>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>seagreenBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>146</x>
+                        <y>131</y>
+                        <width>123</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Deep-sea green</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>particleColorLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>85</y>
+                        <width>130</width>
+                        <height>16</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Colors and attributes:</string>
+                </property>
+            </widget>
+            <widget class="Line">
+                <property name="name">
+                    <cstring>Line4</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>135</x>
+                        <y>85</y>
+                        <width>265</width>
+                        <height>16</height>
+                    </rect>
+                </property>
+                <property name="frameShape">
+                    <enum>HLine</enum>
+                </property>
+                <property name="frameShadow">
+                    <enum>Sunken</enum>
+                </property>
+                <property name="orientation">
+                    <enum>Horizontal</enum>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>flashesBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>35</y>
+                        <width>245</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Flash screen when fireworks explode</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>enable to see a 'epilectic' flash :-)</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>When a fireworks explodes up in the sky, the explosion light everything up for some hundreds of second.</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>colourLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>205</x>
+                        <y>60</y>
+                        <width>50</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Colour:</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>bottomFireBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>60</y>
+                        <width>140</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Enable bottom fire</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>enables bottom jumping particles</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>This enables coloured particles jumping on the bottom of the screen. Can be set to look like a burning fire.</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>redBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>16</x>
+                        <y>106</y>
+                        <width>90</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Deep red</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>orangeBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>146</x>
+                        <y>106</y>
+                        <width>95</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Hot orange</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>greenBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>275</x>
+                        <y>106</y>
+                        <width>105</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Purest green</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>blueBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>275</x>
+                        <y>131</y>
+                        <width>100</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Boring blue</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>purpleBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>16</x>
+                        <y>131</y>
+                        <width>110</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Velvet purple</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>whiteBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>155</y>
+                        <width>110</width>
+                        <height>19</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Blinding white</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <item>
+                    <property name="text">
+                        <string>Blue</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>Orange</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>Purple</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>Red</string>
+                    </property>
+                </item>
+                <property name="name">
+                    <cstring>bottomFireColourList</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>260</x>
+                        <y>58</y>
+                        <width>140</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>pick the color you like best</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>Blue, Orange, Purple, Red... many choices here!!</string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Specials</string>
+            </attribute>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>logosGroup</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>5</y>
+                        <width>395</width>
+                        <height>65</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>Logos</string>
+                </property>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>reduceLogoBox</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>200</x>
+                            <y>16</y>
+                            <width>90</width>
+                            <height>19</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Low detail</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>useful for increasing speed</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This reduces tp 1/4 the amount of generated logo particles.</string>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>frequencyLabel</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>11</x>
+                            <y>41</y>
+                            <width>68</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Frequency:</string>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>Layout7</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>85</x>
+                            <y>41</y>
+                            <width>299</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>6</number>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>neverLabel</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Never</string>
+                            </property>
+                        </widget>
+                        <widget class="QSlider">
+                            <property name="name">
+                                <cstring>logosFrequencySlider</cstring>
+                            </property>
+                            <property name="minValue">
+                                <number>0</number>
+                            </property>
+                            <property name="maxValue">
+                                <number>10</number>
+                            </property>
+                            <property name="value">
+                                <number>5</number>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>oftenLabel</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Often</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>tuxBox</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>11</x>
+                            <y>16</y>
+                            <width>55</width>
+                            <height>19</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Tux</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>enables Tux</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This enables the Random generation of Tux logos</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>kdeBox</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>97</x>
+                            <y>16</y>
+                            <width>85</width>
+                            <height>19</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>KDE logo</string>
+                    </property>
+                    <property name="checked">
+                        <bool>false</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>enables KDE</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This enables the Random generation of Kde logos</string>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>soundBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>150</y>
+                        <width>175</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Enable explosions sound</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>remember to turn the speakers on!</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>This enables the sound. For now isn't well implemented.</string>
+                </property>
+            </widget>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>starsGroup</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>75</y>
+                        <width>395</width>
+                        <height>65</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>Stars</string>
+                </property>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>starsGradientBox</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>200</x>
+                            <y>39</y>
+                            <width>130</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Gradient coloring</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>emulate horizon coloring</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Gives lower stars a reddish tint.</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>starsFlickerBox</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>11</x>
+                            <y>39</y>
+                            <width>90</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Flickering</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>enables a natural 'flicker' effect</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This option produces a sort of vibration in the lightness of the star.</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>starsBox</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>11</x>
+                            <y>16</y>
+                            <width>105</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Enable stars</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>what about a sky whithout stars?</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Enable small stars. Can also be set flickering, number of stars and gradient coloring.</string>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>moreStarsLabel</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>350</x>
+                            <y>15</y>
+                            <width>34</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>More</string>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lessStarsLabel</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>200</x>
+                            <y>15</y>
+                            <width>35</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Less</string>
+                    </property>
+                </widget>
+                <widget class="QSlider">
+                    <property name="name">
+                        <cstring>starNumberSlider</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>230</x>
+                            <y>19</y>
+                            <width>115</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                    <property name="minValue">
+                        <number>0</number>
+                    </property>
+                    <property name="maxValue">
+                        <number>10</number>
+                    </property>
+                    <property name="value">
+                        <number>3</number>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>realtimeBox</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>true</bool>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>210</x>
+                        <y>150</y>
+                        <width>160</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>RealTime - (frame skip)</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>disable if you see 'dotted tails' or the action goes too fast.</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>A new feature.. if fps drops skip frames and render in real-time.</string>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>FX</string>
+            </attribute>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>fadeTable</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>10</y>
+                        <width>395</width>
+                        <height>80</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string></string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>click on the ? button on the top of the window and then on the checkbox for more info</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>TextLabel2_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>55</y>
+                            <width>376</width>
+                            <height>21</height>
+                        </rect>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>1</bold>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>SO SLOW on machines whithout a powerful 3D accelerator !!</string>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>Layout7_2_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>68</x>
+                            <y>35</y>
+                            <width>315</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>6</number>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>smallFadingLabel</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Small</string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>looks like disabling the effect!</string>
+                            </property>
+                        </widget>
+                        <widget class="QSlider">
+                            <property name="name">
+                                <cstring>fadingSlider</cstring>
+                            </property>
+                            <property name="minValue">
+                                <number>0</number>
+                            </property>
+                            <property name="maxValue">
+                                <number>9</number>
+                            </property>
+                            <property name="value">
+                                <number>3</number>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>adjust fading value</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>slide to left to reduce 'tail' effect.. to the right you increase it.</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>psychoticFadingLabel</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Psychotic</string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>yeah, right, what's next??</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>amountLabel</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>35</y>
+                            <width>55</width>
+                            <height>16</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Amount:</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>fadeBox</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>10</y>
+                            <width>200</width>
+                            <height>19</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Enable particles fading effect</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>click on the ? button and then here for more info</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This changes the way the screen is cleared. If this option is enabled, instead of flooding the buffer whith black color, a semi transparent black 'glass' is superposed on scene. This 'fades down' the lightness of the picture and gives a natural 'tail' effect .. try me :-) !!</string>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>Layout11</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>210</x>
+                        <y>100</y>
+                        <width>190</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>flaresLessLabel</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>false</bool>
+                        </property>
+                        <property name="text">
+                            <string>Small</string>
+                        </property>
+                    </widget>
+                    <widget class="QSlider">
+                        <property name="name">
+                            <cstring>flaresSlider</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>false</bool>
+                        </property>
+                        <property name="minValue">
+                            <number>10</number>
+                        </property>
+                        <property name="maxValue">
+                            <number>26</number>
+                        </property>
+                        <property name="lineStep">
+                            <number>2</number>
+                        </property>
+                        <property name="pageStep">
+                            <number>6</number>
+                        </property>
+                        <property name="value">
+                            <number>16</number>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>i want to slide right!</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>flaresMoreLabel</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>false</bool>
+                        </property>
+                        <property name="text">
+                            <string>Big</string>
+                        </property>
+                    </widget>
+                </hbox>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>flaresBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>100</y>
+                        <width>160</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Enable MEGA flares</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>warning, this can shock your mind :-)</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>Multiplies the scale factor for particles near you, resulting in a colorful experience.</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>sphLightBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>125</y>
+                        <width>240</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Enable light after spherical explosion</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>warning, this can shock your mind :-)</string>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>Multiplies the scale factor for particles near you, resulting in a colorful experience.</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>cloudsLightenBox</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>false</bool>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>210</x>
+                        <y>150</y>
+                        <width>195</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Enable lighting of clouds</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>initial work. not jet available.</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox">
+                <property name="name">
+                    <cstring>cloudsBox</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>false</bool>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>15</x>
+                        <y>150</y>
+                        <width>110</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Enable clouds</string>
+                </property>
+                <property name="toolTip" stdset="0">
+                    <string>only partially done</string>
+                </property>
+            </widget>
+        </widget>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>PushButton5</sender>
+        <signal>clicked()</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>PushButton4</sender>
+        <signal>clicked()</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>okButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>starsBox</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>starsBox_stateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>bottomFireBox</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>bottomFireBox_stateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>tuxBox</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>logosT_stateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>kdeBox</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>logosK_stateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>fadeBox</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>fadeBox_stateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>flaresBox</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>flaresBox_stateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>cloudsBox</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>cloudsBox_stateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>detachButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>togglePreviewState_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>applyButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>applyButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>updateButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KFireSaverSetup</receiver>
+        <slot>updateButton_clicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>PushButton4</tabstop>
+    <tabstop>PushButton5</tabstop>
+    <tabstop>TabWidget2</tabstop>
+    <tabstop>flashesBox</tabstop>
+    <tabstop>trailsBox</tabstop>
+    <tabstop>tuxBox</tabstop>
+    <tabstop>kdeBox</tabstop>
+    <tabstop>logosFrequencySlider</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">kfiresaver.h</include>
+    <include location="local" impldecl="in implementation">kfiresaversetup.ui.h</include>
+</includes>
+<variables>
+    <variable>bool previewAttached;</variable>
+    <variable>KFireSaver * fireSaverWidget;</variable>
+</variables>
+<slots>
+    <slot>init()</slot>
+    <slot access="private">updatePreview( bool save )</slot>
+    <slot>okButton_clicked()</slot>
+    <slot>updateButton_clicked()</slot>
+    <slot access="private">writeConfig()</slot>
+    <slot access="private">readConfig()</slot>
+    <slot>bottomFireBox_stateChanged( int state )</slot>
+    <slot>starsBox_stateChanged( int state )</slot>
+    <slot>fadeBox_stateChanged( int state )</slot>
+    <slot>logosT_stateChanged( int state )</slot>
+    <slot>logosK_stateChanged( int state )</slot>
+    <slot>flaresBox_stateChanged( int state )</slot>
+    <slot>cloudsBox_stateChanged( int state )</slot>
+    <slot>togglePreviewState_clicked()</slot>
+    <slot>applyButton_clicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
