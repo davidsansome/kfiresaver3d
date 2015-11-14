@@ -18,25 +18,23 @@
 //     Author: Enrico Ros, based on the great work of David Sansome (kfiresaver)
 //     Email:  asy@libero.it
 
-#include <qgl.h>
-//Added by qt3to4:
-#include <QTimerEvent>
-#include <kconfig.h>
-#include <kaudioplayer.h>
-#include <math.h>
-#include <kstddirs.h>
-#include <klocale.h>
-#include <qdatetime.h>
-#include <qmessagebox.h>
-#include <stdlib.h>
-#include <sys/time.h>
-#include <iostream.h>
+
 #include "kfiresaver.h"
 #include "particle.h"
 
+#include <QDateTime>
+#include <QMessageBox>
+#include <QSettings>
+#include <QTimerEvent>
 
-KFireSaver :: KFireSaver( QWidget *parent, const char *name )
-	: QGLWidget( parent, name )
+#include <cmath>
+#include <cstdlib>
+#include <iostream>
+#include <sys/time.h>
+
+
+KFireSaver :: KFireSaver( QWidget *parent )
+  : QGLWidget( parent )
 {
 	QTime midnight( 0, 0, 0 );
 	srand( midnight.secsTo(QTime::currentTime()) );
@@ -44,18 +42,15 @@ KFireSaver :: KFireSaver( QWidget *parent, const char *name )
 	readConfig();
 
 	if (parameters.enableKDElogo) {
-		kdeLogo.setAlphaBuffer(true);
-		kdeLogo.load(locate("data","kfiresaver/kde.png"));
+    kdeLogo.load(":kde.png");
 	}
 	if (parameters.enableTux) {
-		tux.setAlphaBuffer(true);
-		tux.load(locate("data","kfiresaver/tux.png"));
+    tux.load(":tux.png");
 	}
 
 	if (parameters.enableStars) {
 		int number = parameters.starsNumber + 1;
 		number *= 10 * number;
-		starList.setAutoDelete(true);
 		for (int i=0 ; i<number ; i++)
 		{
 			Particle * star = new Particle;
@@ -76,7 +71,6 @@ KFireSaver :: KFireSaver( QWidget *parent, const char *name )
 		}
 	}
 
-	particleList.setAutoDelete(true);
 	if (parameters.enableBottomFire) {
 		for (int i=0 ; i<NUMBER_OF_FIREPARTICLES ; i++)
 		{
@@ -91,7 +85,7 @@ KFireSaver :: KFireSaver( QWidget *parent, const char *name )
 	}
 
 	if (parameters.enableSound)
-		sound_explosion = locate("data","kfiresaver/fw_explode.wav");
+    sound_explosion = new QSound(":fw_explode.wav", this);
 
 	showp.forceBicolour =
 	showp.forceColour =
@@ -115,12 +109,10 @@ void KFireSaver :: initializeGL()
 
 	// Textures
 	QImage buf;
-	if (!buf.load(locate("data","kfiresaver/particle.bmp")))
+  if (!buf.load(":particle.bmp"))
 	{
 		qWarning("Could not read image-particle file, using single-color instead.");
-		QImage dummy(0,0,0);
-		dummy.fill( Qt::white.rgb() );
-		buf = dummy;
+    buf = QImage();
 	}
 	particleTexture = QGLWidget::convertToGLFormat(buf);  // flipped 32bit RGBA
 	glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
@@ -251,7 +243,7 @@ void KFireSaver :: paintGL ()
 		glLoadIdentity();
 		//perspective projection (could be done directly by opengl.. :-)
 		if (PERSP_MAG_FACTOR*particle->ypos < -246.0) {
-		    particleList.remove( i-- );
+        delete particleList.takeAt( i-- );
 		    continue;
 		}
 		GLfloat	posx, posy,
@@ -261,7 +253,7 @@ void KFireSaver :: paintGL ()
 				-50.0	);
 		if (parameters.enableMegaFlares) {
 			if ((sfactor=parameters.megaFlares*particle->ypos) < -254.0) {
-				particleList.remove( i-- );
+        delete particleList.takeAt( i-- );
 				continue;
 			}
 			sfactor = 256.0 / (256.0 + sfactor);
@@ -329,10 +321,10 @@ void KFireSaver :: paintGL ()
 			if ((particle->zspeed <= 0.0f && !particle->useLife) ||
 			    (particle->useLife && particle->life <= 0.0) )
 			{
-				if (parameters.enableSound)
-					KAudioPlayer::play(sound_explosion);
+        if (parameters.enableSound)
+          sound_explosion->play();
 				explodeFirework(particle);
-				particleList.remove(i--);
+        delete particleList.takeAt(i--);
 			}
 			break;
 
@@ -340,7 +332,7 @@ void KFireSaver :: paintGL ()
 		    case Particle::KdeLogoParticle:
 		    case Particle::FireWorkDebrisParticle:
 			if (particle->life <= 0.0 || posx<-FIELDX_2 || posx>FIELDX_2)
-				particleList.remove(i--);
+        delete particleList.takeAt(i--);
 			break;
 
 			//can't be that case. inserted only to remove warning
@@ -755,52 +747,52 @@ void KFireSaver :: burnLogo(QImage image)
 
 void KFireSaver :: readConfig ()
 {
-	KConfig config("kfiresaverrc",true,false);
+  QSettings config;
 	/* fireworks */
-	parameters.enableNoFW = config.readBoolEntry("enableNoFW",false);
-	parameters.enableSphere = config.readBoolEntry("enableSphere",true);
-	parameters.enableSplitter = config.readBoolEntry("enableSplitter",false);
-	parameters.enableCircle = config.readBoolEntry("enableCircle",false);
-	parameters.enableBiCircle = config.readBoolEntry("enableBiCircle",false);
-	parameters.enableCascade = config.readBoolEntry("enableCascade",false);
-	parameters.enableFountain = config.readBoolEntry("enableFountain",false);
-	parameters.enableNova = config.readBoolEntry("enableNova",false);
-	parameters.enableDaisy = config.readBoolEntry("enableDaisy",false);
-	parameters.enableLove = config.readBoolEntry("enableLove",false);
-	parameters.fireworksFrequency = config.readNumEntry("fireworksFrequency",15);
+  parameters.enableNoFW = config.value("enableNoFW",false).toBool();
+	parameters.enableSphere = config.value("enableSphere",true).toBool();
+	parameters.enableSplitter = config.value("enableSplitter",false).toBool();
+	parameters.enableCircle = config.value("enableCircle",false).toBool();
+	parameters.enableBiCircle = config.value("enableBiCircle",false).toBool();
+	parameters.enableCascade = config.value("enableCascade",false).toBool();
+	parameters.enableFountain = config.value("enableFountain",false).toBool();
+	parameters.enableNova = config.value("enableNova",false).toBool();
+	parameters.enableDaisy = config.value("enableDaisy",false).toBool();
+	parameters.enableLove = config.value("enableLove",false).toBool();
+	parameters.fireworksFrequency = config.value("fireworksFrequency",15).toInt();
 	/* colors */
-	parameters.enableRed = config.readBoolEntry("enableRed",false);
-	parameters.enableOrange = config.readBoolEntry("enableOrange",true);
-	parameters.enableGreen = config.readBoolEntry("enableGreen",false);
-	parameters.enableBlue = config.readBoolEntry("enableBlue",false);
-	parameters.enableWhite = config.readBoolEntry("enableWhite",true);
-	parameters.enablePurple = config.readBoolEntry("enablePurple",false);
-	parameters.enableDeepGreen = config.readBoolEntry("enableDeepGreen",true);
-	parameters.enableCombos = config.readBoolEntry("enableCombos",true);
-	parameters.enableSparkle = config.readBoolEntry("enableSparkle",true);
+	parameters.enableRed = config.value("enableRed",false).toBool();
+	parameters.enableOrange = config.value("enableOrange",true).toBool();
+	parameters.enableGreen = config.value("enableGreen",false).toBool();
+	parameters.enableBlue = config.value("enableBlue",false).toBool();
+	parameters.enableWhite = config.value("enableWhite",true).toBool();
+	parameters.enablePurple = config.value("enablePurple",false).toBool();
+	parameters.enableDeepGreen = config.value("enableDeepGreen",true).toBool();
+	parameters.enableCombos = config.value("enableCombos",true).toBool();
+	parameters.enableSparkle = config.value("enableSparkle",true).toBool();
 	/* misc */
-	showp.ShowType = (enum enumShowType)config.readNumEntry("showType",0);
-	parameters.enableStars = config.readBoolEntry("enableStars",true);
-	parameters.enableStarFlickering = config.readBoolEntry("enableStarsFlickering",false);
-	parameters.enableStarGradient = config.readBoolEntry("enableStarsGradient",true);
-	parameters.enableFlash = config.readBoolEntry("enableFlash",false);
-	parameters.enableBottomFire = config.readBoolEntry("enableBottomFire",true);
-	parameters.enableFade = config.readBoolEntry("enableFade",false);
-	parameters.enableMegaFlares = config.readBoolEntry("enableMegaFlares",true);
-	parameters.enableSphereLight = config.readBoolEntry("enableSphereLight",true);
-	parameters.enableClouds = config.readBoolEntry("enableClouds",false);
-	parameters.enableCloudsLight = config.readBoolEntry("enableLightingClouds",false);
-	parameters.enableSound = config.readBoolEntry("enableSound",true);
-	parameters.enableTrails = config.readBoolEntry("enableTrails",false);
-	parameters.enableTux = config.readBoolEntry("enableTux",false);
-	parameters.enableKDElogo = config.readBoolEntry("enableKdeLogo",false);
-	parameters.enableReduceLogo = config.readBoolEntry("enableReduceLogo",true);
-	parameters.enableRealtime = config.readBoolEntry("enableRealtime",true);
-	parameters.starsNumber = config.readNumEntry("starsNumber",4);
-	parameters.fadeAmount = config.readNumEntry("fadeAmount",3);
-	parameters.megaFlares = config.readNumEntry("megaFlares",17);
-	parameters.logoFrequency = config.readNumEntry("logoFrequency",5);
-	parameters.bottomFireColour = config.readNumEntry("bottomFireColour",2);
+	showp.ShowType = (enum enumShowType)config.value("showType",0).toInt();
+	parameters.enableStars = config.value("enableStars",true).toBool();
+	parameters.enableStarFlickering = config.value("enableStarsFlickering",false).toBool();
+	parameters.enableStarGradient = config.value("enableStarsGradient",true).toBool();
+	parameters.enableFlash = config.value("enableFlash",false).toBool();
+	parameters.enableBottomFire = config.value("enableBottomFire",true).toBool();
+	parameters.enableFade = config.value("enableFade",false).toBool();
+	parameters.enableMegaFlares = config.value("enableMegaFlares",true).toBool();
+	parameters.enableSphereLight = config.value("enableSphereLight",true).toBool();
+	parameters.enableClouds = config.value("enableClouds",false).toBool();
+	parameters.enableCloudsLight = config.value("enableLightingClouds",false).toBool();
+	parameters.enableSound = config.value("enableSound",true).toBool();
+	parameters.enableTrails = config.value("enableTrails",false).toBool();
+	parameters.enableTux = config.value("enableTux",false).toBool();
+	parameters.enableKDElogo = config.value("enableKdeLogo",false).toBool();
+	parameters.enableReduceLogo = config.value("enableReduceLogo",true).toBool();
+	parameters.enableRealtime = config.value("enableRealtime",true).toBool();
+	parameters.starsNumber = config.value("starsNumber",4).toInt();
+	parameters.fadeAmount = config.value("fadeAmount",3).toInt();
+	parameters.megaFlares = config.value("megaFlares",17).toInt();
+	parameters.logoFrequency = config.value("logoFrequency",5).toInt();
+	parameters.bottomFireColour = config.value("bottomFireColour",2).toInt();
 
 	/* check for correctness of parameters and make some fixes */
 	/* check for correctness of parameters and make some fixes */
@@ -851,13 +843,13 @@ void KFireSaver :: readConfig ()
 		parameters.colorsT[parameters.colorsCount++] = 6;
 	if ( !parameters.colorsCount )
 	{
-		cout << "KFireSaver3D: Warning enable at least one color" << endl;
-		cout << "    enabling 'Blinding White'" << endl;
+    std::cout << "KFireSaver3D: Warning enable at least one color" << std::endl;
+    std::cout << "    enabling 'Blinding White'" << std::endl;
 		
 		parameters.colorsCount = 1;
 		parameters.colorsT[0] = 4;
-		KConfig modconfig("kfiresaverrc",false,false);
-		modconfig.writeEntry("enableWhite", true);
+    QSettings config;
+    config.setValue("enableWhite", true);
 	}
 	parameters.colorsT[ parameters.colorsCount ] =
 		parameters.colorsT[ parameters.colorsCount-1 ];
@@ -884,13 +876,13 @@ void KFireSaver :: readConfig ()
 	if (parameters.enableLove)
 		parameters.typesT[parameters.typesCount++] = 9;
 	if ( !parameters.typesCount ) {
-		cout << "KFireSaver3D: Warning, no fireworks enabled in config file" << endl;
-		cout << "    enabling 'Classic Spherical'" << endl;
+    std::cout << "KFireSaver3D: Warning, no fireworks enabled in config file" << std::endl;
+    std::cout << "    enabling 'Classic Spherical'" << std::endl;
 
 		parameters.typesCount = 1;
 		parameters.typesT[0] = 1;
-		KConfig modconfig("kfiresaverrc",false,false);
-		modconfig.writeEntry("enableSphere", true);
+    QSettings config;
+    config.setValue("enableWhite", true);
 	}
 	parameters.typesT[ parameters.typesCount ] =
 		parameters.typesT[ parameters.typesCount-1 ];

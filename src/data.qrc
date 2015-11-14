@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>kde.png</file>
+        <file>tux.png</file>
+        <file>particle.bmp</file>
+        <file>fw_explode.wav</file>
+    </qresource>
+</RCC>

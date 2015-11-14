@@ -18,30 +18,18 @@
 //     Author: Enrico Ros, based on the great work of David Sansome (kfiresaver)
 //     Email:  asy@libero.it
 
-#include "kfiresaverkss.h"
+#include "kfiresaver.h"
 
-#include <qgl.h>
-#include <kapplication.h>
-#include <kcmdlineargs.h>
-#include <kaboutdata.h>
-#include <klocale.h>
-#include <qmessagebox.h>
-#include <kfiresaversetup.h>
+#include <QApplication>
 
-extern "C"
-{
-    const char *kss_applicationName = "kfiresaver3d.kss";
-    const char *kss_description = I18N_NOOP( "Fireworks3D" );
-    const char *kss_version = "0.5";
+int main(int argc, char** argv) {
+  QApplication app(argc, argv);
+  app.setOrganizationName("David Sansome");
+  app.setOrganizationDomain("www.davidsansome.com");
+  app.setApplicationName("kfiresaver3d");
 
-    KScreenSaver *kss_create( WId id )
-    {             	
-        return new KFireSaverKSS( id );
-    }
+  KFireSaver fs;
+  fs.show();
 
-    QDialog *kss_setup()
-    {
-        return new KFireSaverSetup();
-    }
+  return app.exec();
 }
-

@@ -21,7 +21,6 @@
 #ifndef KFIRESAVERKSS_H
 #define KFIRESAVERKSS_H
 
-#include <kscreensaver.h>
 #include <qdialog.h>
 
 class KFireSaver;

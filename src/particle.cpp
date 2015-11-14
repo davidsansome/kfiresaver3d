@@ -18,9 +18,9 @@
 //     Author: Enrico Ros, based on the great work of David Sansome (kfiresaver)
 //     Email:  asy@libero.it
 
-#include <math.h>
-#include <stdlib.h>
-#include <iostream.h>
+#include <cmath>
+#include <cstdlib>
+#include <iostream>
 #include "particle.h"
 #include "kfiresaver.h"
 

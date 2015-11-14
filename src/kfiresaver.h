@@ -31,20 +31,19 @@
 #define FIELDX_2 FIELDXWIDTH/2.0
 #define FIELDY_2 FIELDYHEIGHT/2.0
 
-#include <qgl.h>
-#include <q3ptrlist.h>
-#include <qimage.h>
-#include <qstring.h>
-#include <qevent.h>
-//Added by qt3to4:
+#include <QImage>
+#include <QList>
+#include <QString>
 #include <QTimerEvent>
+#include <QSound>
+#include <QtOpenGL/QGLWidget>
 
 class Particle;
 
 class KFireSaver : public QGLWidget
 {
 public:
-	KFireSaver( QWidget *parent=0, const char *name=0 );
+  KFireSaver( QWidget *parent=0 );
 
 protected:
 	void initializeGL();
@@ -59,7 +58,7 @@ private:
 	void explodeFirework(Particle* fireWorkLeaderParticle);
 	void burnLogo(QImage image);
 
-	QString	sound_explosion;
+  QSound*	sound_explosion;
 //		sound_debris;
 //		sound_sparkle;
 
@@ -70,7 +69,7 @@ private:
 //		noveTexture;
 //		cometTexture;
 
-	Q3PtrList<Particle>
+  QList<Particle*>
 		particleList,
 		starList;
 

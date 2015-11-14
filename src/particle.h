@@ -21,8 +21,6 @@
 #ifndef PARTICLE_H
 #define PARTICLE_H
 
-#include <qgl.h>
-
 #define FLICKER_FRAMES_DELAY 8
 #define DRAND ((float)rand() / (float)RAND_MAX)  /*random float between 0 and 1*/
 
@@ -59,10 +57,10 @@ public:
 		ParticleType pt,
 		int color_scheme = 0,
 		Particle* leader = NULL,
-		GLfloat powermin = 5.0,
-		GLfloat powermax = 10.0,
+    float powermin = 5.0,
+    float powermax = 10.0,
 		bool flickers = false,
-		GLfloat *displace = NULL );
+    float *displace = NULL );
 
 	void updateParameters ( double dTime );
 
@@ -70,11 +68,11 @@ public:
 	ParticleType particleType;
 	FireworkType fireworkType;
 	
-	GLfloat	xpos,	ypos,	zpos,
+  float	xpos,	ypos,	zpos,
 		xspeed,	yspeed,	zspeed,
 		zacc;
 		
-	GLfloat colour[3],
+  float colour[3],
 		life, startLife,
 		pixelSize;
 		
